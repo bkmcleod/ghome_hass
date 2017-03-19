@@ -1,0 +1,117 @@
+brendans_bedroom_set_tv_to_roku:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendan_tv_input_roku
+    - condition: state
+      entity_id: switch.brendan_bedroom_tv_power
+      state: 'off'
+    - service: switch.turn_on
+      data:
+        entity_id: switch.brendan_bedroom_tv_power
+    - delay: 00:00:20
+    - service: script.turn_on
+      data:
+        entity_id: script.brendan_tv_input_roku
+        
+brendans_bedroom_set_tv_to_chromecast:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendan_tv_input_chromecast
+    - condition: state
+      entity_id: switch.brendan_bedroom_tv_power
+      state: 'off'
+    - service: switch.turn_on
+      data:
+        entity_id: switch.brendan_bedroom_tv_power
+    - delay: 00:00:20
+    - service: script.turn_on
+      data:
+        entity_id: script.brendan_tv_input_chromecast
+        
+brendans_bedroom_set_tv_to_pi:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendan_tv_input_pi
+    - condition: state
+      entity_id: switch.brendan_bedroom_tv_power
+      state: 'off'
+    - service: switch.turn_on
+      data:
+        entity_id: switch.brendan_bedroom_tv_power
+    - delay: 00:00:20
+    - service: script.turn_on
+      data:
+        entity_id: script.brendan_tv_input_pi
+
+
+brendans_bedroom_watch_netflix:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_roku_launch_netflix
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_bedroom_set_tv_to_roku
+            
+brendans_bedroom_watch_hulu:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_roku_launch_hulu
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_bedroom_set_tv_to_roku
+            
+brendans_bedroom_watch_plex:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_roku_launch_plex
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_bedroom_set_tv_to_roku   
+        
+brendans_bedroom_watch_trutv:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_kodi_channel_trutv
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_bedroom_set_tv_to_pi
+        
+brendans_bedroom_watch_hgtv:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_kodi_channel_hgtv
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_bedroom_set_tv_to_pi
+        
+brendans_bedroom_watch_abc:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_kodi_channel_abc
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_bedroom_set_tv_to_pi
+        
+brendans_bedroom_watch_tbs:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_kodi_channel_tbs
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_bedroom_set_tv_to_pi
+        
+brendans_bedroom_watch_live_tv:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_bedroom_watch_abc   

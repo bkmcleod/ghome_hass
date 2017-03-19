@@ -1,0 +1,50 @@
+#Pass throughs for curl commands to kodi
+brendans_kodi_play_pause:
+  sequence:
+    - service: shell_command.brendans_kodi_play_pause_command
+brendans_kodi_up:
+  sequence:
+    - service: shell_command.brendans_kodi_up_command
+brendans_kodi_down:
+  sequence:
+    - service: shell_command.brendans_kodi_down_command
+brendans_kodi_left:
+  sequence:
+    - service: shell_command.brendans_kodi_left_command
+brendans_kodi_right:
+  sequence:
+    - service: shell_command.brendans_kodi_right_command
+brendans_kodi_select:
+  sequence:
+    - service: shell_command.brendans_kodi_select_command
+brendans_kodi_instant_replay:
+  sequence:
+    - service: shell_command.brendans_kodi_instant_replay_command
+brendans_kodi_home:
+  sequence:
+    - service: shell_command.brendans_kodi_home_command
+brendans_kodi_back:
+  sequence:
+    - service: shell_command.brendans_kodi_back_command
+brendans_kodi_stop:
+  sequence:
+    - service: shell_command.brendans_kodi_stop_command
+brendans_kodi_fast_forward:
+  sequence:
+    - service: shell_command.brendans_kodi_fast_forward_command
+brendans_kodi_fast_backward:
+  sequence:
+    - service: shell_command.brendans_kodi_fast_backward_command
+brendans_kodi_channel_trutv:
+  sequence:
+    - service: shell_command.brendans_kodi_channel_trutv_command
+brendans_kodi_channel_abc:
+  sequence:
+    - service: shell_command.brendans_kodi_channel_abc_command
+brendans_kodi_channel_hgtv:
+  sequence:
+    - service: shell_command.brendans_kodi_channel_hgtv_command
+brendans_kodi_channel_tbs:
+  sequence:
+    - service: shell_command.brendans_kodi_channel_tbs_command
+    

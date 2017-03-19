@@ -1,0 +1,33 @@
+brendans_roku_play_pause_command: curl -d '' http://192.168.11.162:8060/keypress/play
+brendans_roku_up_command: curl -d '' http://192.168.11.162:8060/keypress/up
+brendans_roku_down_command: curl -d '' http://192.168.11.162:8060/keypress/down
+brendans_roku_left_command: curl -d '' http://192.168.11.162:8060/keypress/left
+brendans_roku_right_command: curl -d '' http://192.168.11.162:8060/keypress/right
+brendans_roku_select_command: curl -d '' http://192.168.11.162:8060/keypress/select
+brendans_roku_instant_replay_command: curl -d '' http://192.168.11.162:8060/keypress/instantreplay
+brendans_roku_home_command: curl -d '' http://192.168.11.162:8060/keypress/home
+brendans_roku_back_command: curl -d '' http://192.168.11.162:8060/keypress/back
+brendans_roku_fast_forward_command: curl -d '' http://192.168.11.162:8060/keypress/fwd
+brendans_roku_fast_backward_command: curl -d '' http://192.168.11.162:8060/keypress/rev
+brendans_roku_launch_netflix_command: curl -d '' http://192.168.11.162:8060/launch/12
+brendans_roku_launch_hulu_command: curl -d '' http://192.168.11.162:8060/launch/2285
+brendans_roku_launch_plex_command: curl -d '' http://192.168.11.162:8060/launch/13535
+
+
+
+brendans_kodi_play_pause_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Player.PlayPause","params":{"playerid":1}}' -H 'content-type:application/json;'
+brendans_kodi_up_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Input.Up"}' -H 'content-type:application/json;'
+brendans_kodi_down_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Input.Down"}' -H 'content-type:application/json;'
+brendans_kodi_left_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Input.Left"}' -H 'content-type:application/json;'
+brendans_kodi_right_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Input.Right"}' -H 'content-type:application/json;'
+brendans_kodi_select_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Input.Select"}' -H 'content-type:application/json;'
+brendans_kodi_home_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Input.Home"}' -H 'content-type:application/json;'
+brendans_kodi_back_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Input.Back"}' -H 'content-type:application/json;'
+brendans_kodi_fast_forward_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Player.SetSpeed","params":{"playerid":1, "speed":4}}' -H 'content-type:application/json;'
+brendans_kodi_fast_backward_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Player.SetSpeed","params":{"playerid":1, "speed":-4}}' -H 'content-type:application/json;'
+brendans_kodi_stop_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Player.Stop","params":{"playerid":1}}' -H 'content-type:application/json;'
+brendans_kodi_instant_replay_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Player.Seek","params":{"playerid":1, "value":"smallbackward"}}' -H 'content-type:application/json;'
+brendans_kodi_channel_trutv_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Player.Open","params":{"item":{"channelid":26}}}' -H 'content-type:application/json;'
+brendans_kodi_channel_abc_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Player.Open","params":{"item":{"channelid":11}}}' -H 'content-type:application/json;'
+brendans_kodi_channel_hgtv_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Player.Open","params":{"item":{"channelid":46}}}' -H 'content-type:application/json;'
+brendans_kodi_channel_tbs_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Player.Open","params":{"item":{"channelid":39}}}' -H 'content-type:application/json;'

@@ -1,0 +1,43 @@
+#Pass throughs for curl commands to roku
+brendans_roku_play_pause:
+  sequence:
+    - service: shell_command.brendans_roku_play_pause_command
+brendans_roku_up:
+  sequence:
+    - service: shell_command.brendans_roku_up_command
+brendans_roku_down:
+  sequence:
+    - service: shell_command.brendans_roku_down_command
+brendans_roku_left:
+  sequence:
+    - service: shell_command.brendans_roku_left_command
+brendans_roku_right:
+  sequence:
+    - service: shell_command.brendans_roku_right_command
+brendans_roku_select:
+  sequence:
+    - service: shell_command.brendans_roku_select_command
+brendans_roku_instant_replay:
+  sequence:
+    - service: shell_command.brendans_roku_instant_replay_command
+brendans_roku_home:
+  sequence:
+    - service: shell_command.brendans_roku_home_command
+brendans_roku_back:
+  sequence:
+    - service: shell_command.brendans_roku_back_command
+brendans_roku_launch_plex:
+  sequence:
+    - service: shell_command.brendans_roku_launch_plex_command
+brendans_roku_launch_netflix:
+  sequence:
+    - service: shell_command.brendans_roku_launch_netflix_command
+brendans_roku_launch_hulu:
+  sequence:
+    - service: shell_command.brendans_roku_launch_hulu_command
+brendans_roku_fast_forward:
+  sequence:
+    - service: shell_command.brendans_roku_fast_forward_command
+brendans_roku_fast_backward:
+  sequence:
+    - service: shell_command.brendans_roku_fast_backward_command

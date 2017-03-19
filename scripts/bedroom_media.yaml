@@ -1,0 +1,168 @@
+brendans_bedroom_media_play_pause:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            script.brendans_roku_play_pause
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            script.brendans_chromecast_play_pause
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            script.brendans_kodi_play_pause
+          {% else %}
+            none
+          {% endif %}
+brendans_bedroom_media_up:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            script.brendans_roku_up
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            none
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            script.brendans_kodi_up
+          {% else %}
+            none
+          {% endif %}
+brendans_bedroom_media_down:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            script.brendans_roku_down
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            none
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            script.brendans_kodi_down
+          {% else %}
+            none
+          {% endif %}
+brendans_bedroom_media_left:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            script.brendans_roku_left
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            none
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            script.brendans_kodi_left
+          {% else %}
+            none
+          {% endif %}
+brendans_bedroom_media_right:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            script.brendans_roku_right
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            none
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            script.brendans_kodi_right
+          {% else %}
+            none
+          {% endif %}
+brendans_bedroom_media_select:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            script.brendans_roku_select
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            none
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            script.brendans_kodi_select
+          {% else %}
+            none
+          {% endif %}
+brendans_bedroom_media_instant_replay:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            script.brendans_roku_instant_replay
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            none
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            script.brendans_kodi_instant_replay
+          {% else %}
+            none
+          {% endif %}
+brendans_bedroom_media_home:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            script.brendans_roku_home
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            none
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            script.brendans_kodi_home
+          {% else %}
+            none
+          {% endif %}
+brendans_bedroom_media_back:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            script.brendans_roku_back
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            none
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            script.brendans_kodi_back
+          {% else %}
+            none
+          {% endif %}
+brendans_bedroom_media_stop:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            none
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            none
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            script.brendans_kodi_stop
+          {% else %}
+            none
+          {% endif %}
+brendans_bedroom_media_fast_forward:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            script.brendans_roku_fast_forward
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            script.brendans_chromecast_fast_forward
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            script.brendans_kodi_fast_forward
+          {% else %}
+            none
+          {% endif %}
+brendans_bedroom_media_fast_backward:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            script.brendans_roku_fast_backward
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            script.brendans_chromecast_fast_backward
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            script.brendans_kodi_fast_backward
+          {% else %}
+            none
+          {% endif %}

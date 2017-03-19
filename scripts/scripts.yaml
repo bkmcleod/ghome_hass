@@ -1,0 +1,90 @@
+brendans_office_all_off:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendan_office_powerstrip_off
+    - service: scene.turn_on
+      data:
+        entity_id: scene.brendans_office_off
+        
+        
+brendans_office_simple_off:
+  sequence:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.brendans_office_off
+    - service: switch.turn_off
+      data:
+        entity_id: switch.office_center_monitor
+    - service: switch.turn_off
+      data:
+        entity_id: switch.office_right_monitor
+    - service: switch.turn_off
+      data:
+        entity_id: switch.office_left_monitor
+    - service: switch.turn_off
+      data:
+        entity_id: switch.office_speakers
+brendans_office_simple_on:
+  sequence:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.brendans_office_bright
+    - service: switch.turn_on
+      data:
+        entity_id: switch.office_center_monitor
+    - service: switch.turn_on
+      data:
+        entity_id: switch.office_right_monitor
+    - service: switch.turn_on
+      data:
+        entity_id: switch.office_left_monitor
+    - service: switch.turn_on
+      data:
+        entity_id: switch.office_speakers
+        
+        
+brendans_bedroom_automate_leaving:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_roku_home
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_kodi_stop
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_bedroom_lights_off
+    - service: switch.turn_off
+      data:
+        entity_id: switch.brendan_bedroom_tv_power
+        
+brendans_bedroom_lights_off:
+  sequence:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.brendans_bedroom_off
+    - condition: sun
+      after: sunset
+      after_offset: "-1:00:00"
+    - service: scene.turn_on
+      data:
+        entity_id: scene.brendans_bedroom_bedtime
+        
+
+
+# Power Strip Commands
+
+
+brendan_office_powerstrip_on:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/brendanoffice/powerstrip/all/set"
+        payload: "ON"
+brendan_office_powerstrip_off:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/brendanoffice/powerstrip/all/set"
+        payload: "OFF"

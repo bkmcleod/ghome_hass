@@ -1,0 +1,74 @@
+
+
+#MQTT TV publish commands 
+brendan_tv_vol_up:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/media/brendanbedroom/tv/command/set"
+        payload: "TV_VOL_UP"
+brendan_tv_vol_down:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/media/brendanbedroom/tv/command/set"
+        payload: "TV_VOL_DOWN"
+brendan_tv_power_toggle:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/media/brendanbedroom/tv/command/set"
+        payload: "TV_POWER_TOGGLE"
+brendan_tv_exit:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/media/brendanbedroom/tv/command/set"
+        payload: "TV_EXIT"
+brendan_tv_mute:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/media/brendanbedroom/tv/command/set"
+        payload: "TV_MUTE"
+        
+
+brendan_tv_input_roku:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/media/brendanbedroom/tv/command/set"
+        payload: "TV_INPUT_2"
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.brendan_bedroom_active_media_player
+        option: Roku
+brendan_tv_input_pi:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/media/brendanbedroom/tv/command/set"
+        payload: "TV_INPUT_3"
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.brendan_bedroom_active_media_player
+        option: Kodi
+brendan_tv_input_chromecast:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/media/brendanbedroom/tv/command/set"
+        payload: "TV_INPUT_4"
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.brendan_bedroom_active_media_player
+        option: Chromecast
+      
+brendan_tv_input:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/media/brendanbedroom/tv/command/set"
+        payload: "TV_INPUT"
+
+# Power Strip Commands

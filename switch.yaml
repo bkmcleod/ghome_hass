@@ -1,0 +1,81 @@
+- platform: mqtt
+  name: "Brendan Bedroom TV Power"
+  state_topic: "/media/brendanbedroom/tv/power/status"
+  command_topic: "/media/brendanbedroom/tv/power/set"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true 
+- platform: mqtt
+  name: "Office Switch 1"
+  state_topic: "/brendanoffice/powerstrip/switch1/status"
+  command_topic: "/brendanoffice/powerstrip/switch1/set"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true 
+- platform: mqtt
+  name: "Office Switch 2"
+  state_topic: "/brendanoffice/powerstrip/switch2/status"
+  command_topic: "/brendanoffice/powerstrip/switch2/set"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true 
+- platform: mqtt
+  name: "Office Speakers"
+  state_topic: "/brendanoffice/powerstrip/switch3/status"
+  command_topic: "/brendanoffice/powerstrip/switch3/set"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true 
+- platform: mqtt
+  name: "Office Center Monitor"
+  state_topic: "/brendanoffice/powerstrip/switch4/status"
+  command_topic: "/brendanoffice/powerstrip/switch4/set"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true 
+- platform: mqtt
+  name: "Office Right Monitor"
+  state_topic: "/brendanoffice/powerstrip/switch5/status"
+  command_topic: "/brendanoffice/powerstrip/switch5/set"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true 
+- platform: mqtt
+  name: "Office Left Monitor"
+  state_topic: "/brendanoffice/powerstrip/switch6/status"
+  command_topic: "/brendanoffice/powerstrip/switch6/set"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true 
+- platform: mqtt
+  name: "Office HP Desktop"
+  state_topic: "/brendanoffice/powerstrip/switch7/status"
+  command_topic: "/brendanoffice/powerstrip/switch7/set"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true 
+- platform: mqtt
+  name: "Office Lenovo Desktop"
+  state_topic: "/brendanoffice/powerstrip/switch8/status"
+  command_topic: "/brendanoffice/powerstrip/switch8/set"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true 
