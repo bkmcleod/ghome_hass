@@ -82,8 +82,19 @@ media_player:
     host: 192.168.11.14
 
 shell_command: !include shell_commands.yaml
-  
-  
+camera:
+  - platform: rpi_camera
+    name: Fire Camera
+    image_width: 640  
+    image_height: 480  
+    image_quality: 7  
+    image_rotation: 0  
+    timelapse: 1000  
+    horizontal_flip: 0  
+    vertical_flip: 0  
+    file_path: /home/hass/picamera/image.jpg 
+    
+    
     # Enables the frontend
 frontend:
 
