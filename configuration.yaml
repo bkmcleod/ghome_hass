@@ -52,7 +52,12 @@ binary_sensor:
     state_topic: "/dash/bedtime_button"
     payload_on: "active"
     payload_off: "inactive"
-
+sensor:
+  platform: mqtt
+  name: "Fireplace Temperature"
+  state_topic: "/fireplace/exahust"
+  qos: 0
+  unit_of_measurement: "ºC"
 switch: !include switch.yaml   
 input_select:
   brendan_bedroom_active_media_player:
