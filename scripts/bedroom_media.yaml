@@ -166,3 +166,33 @@ brendans_bedroom_media_fast_backward:
           {% else %}
             none
           {% endif %}
+brendans_bedroom_media_guide:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            none
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            none
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            script.brendans_kodi_guide
+          {% else %}
+            none
+          {% endif %}
+brendans_bedroom_media_star:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.brendan_bedroom_active_media_player", "Roku") %}
+            script.brendans_roku_star
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Chromecast") %}
+            none
+          {%-elif is_state("input_select.brendan_bedroom_active_media_player", "Kodi") %}
+            none
+          {% else %}
+            none
+          {% endif %}
+          
+          

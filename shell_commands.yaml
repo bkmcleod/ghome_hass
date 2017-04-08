@@ -12,7 +12,7 @@ brendans_roku_fast_backward_command: curl -d '' http://192.168.11.162:8060/keypr
 brendans_roku_launch_netflix_command: curl -d '' http://192.168.11.162:8060/launch/12
 brendans_roku_launch_hulu_command: curl -d '' http://192.168.11.162:8060/launch/2285
 brendans_roku_launch_plex_command: curl -d '' http://192.168.11.162:8060/launch/13535
-
+brendans_roku_star_command: curl -d '' http://192.168.11.162:8060/keypress/info
 
 
 brendans_kodi_play_pause_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Player.PlayPause","params":{"playerid":1}}' -H 'content-type:application/json;'
@@ -31,3 +31,4 @@ brendans_kodi_channel_trutv_command: curl http://192.168.11.164:8080/jsonrpc -s 
 brendans_kodi_channel_abc_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Player.Open","params":{"item":{"channelid":11}}}' -H 'content-type:application/json;'
 brendans_kodi_channel_hgtv_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Player.Open","params":{"item":{"channelid":46}}}' -H 'content-type:application/json;'
 brendans_kodi_channel_tbs_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","playerid":"1","id":"1","method":"Player.Open","params":{"item":{"channelid":39}}}' -H 'content-type:application/json;'
+brendans_kodi_guide_command: curl http://192.168.11.164:8080/jsonrpc -s --data-binary '{"jsonrpc":"2.0","method":"GUI.ActivateWindow","id":1,"params":{"window":"tvguide"}}' -H 'content-type:application/json;'

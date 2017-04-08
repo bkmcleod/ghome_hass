@@ -67,6 +67,16 @@ input_select:
      - Kodi
      - Chromecast
     initial: Roku
+  fireplace_burn_zone:
+    name: Fireplace Burn Zone
+    options:
+     - Over Temperature
+     - Optimal Burn Zone
+     - Below Temperature
+     - Not Burning
+    initial: Not Burning
+    
+    
 automation:
   - alias: "Bedtime Trigger"
     hide_entity: True
@@ -77,7 +87,6 @@ automation:
     action:
       service: script.turn_on
       entity_id: script.brendans_bedroom_automate_leaving
-      
 media_player:
   - platform: roku
     host: 192.168.11.162

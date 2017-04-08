@@ -47,4 +47,8 @@ brendans_kodi_channel_hgtv:
 brendans_kodi_channel_tbs:
   sequence:
     - service: shell_command.brendans_kodi_channel_tbs_command
+brendans_kodi_guide:
+  sequence:
+    - service: shell_command.brendans_kodi_guide_command
+    
     

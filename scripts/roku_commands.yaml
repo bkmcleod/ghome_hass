@@ -41,3 +41,6 @@ brendans_roku_fast_forward:
 brendans_roku_fast_backward:
   sequence:
     - service: shell_command.brendans_roku_fast_backward_command
+brendans_roku_star:
+  sequence:
+    - service: shell_command.brendans_roku_star_command

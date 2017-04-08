@@ -7,6 +7,38 @@
   optimistic: false
   qos: 0
   retain: true 
+  
+- platform: mqtt
+  name: "Jordan Fireplace Monitor"
+  state_topic: "/fireplace/monitors/jordan/status"
+  command_topic: "/fireplace/monitors/jordan/set"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: true
+  qos: 0
+  retain: true 
+- platform: mqtt
+  name: "Brendan Fireplace Monitor"
+  state_topic: "/fireplace/monitors/brendan/status"
+  command_topic: "/fireplace/monitors/brendan/set"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: true
+  qos: 0
+  retain: true
+- platform: mqtt
+  name: "Joel Fireplace Monitor"
+  state_topic: "/fireplace/monitors/joel/status"
+  command_topic: "/fireplace/monitors/joel/set"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: true
+  qos: 0
+  retain: true 
+
+  
+  
+  
 - platform: mqtt
   name: "Office Switch 1"
   state_topic: "/brendanoffice/powerstrip/switch1/status"
