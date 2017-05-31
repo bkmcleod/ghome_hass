@@ -57,6 +57,20 @@ brendans_bedroom_automate_leaving:
         entity_id: script.brendans_bedroom_lights_off
     - service: switch.turn_off
       data:
+        entity_id: switch.brendan_bedroom_tv_power        
+brendans_bedroom_automate_bedtime:
+  sequence:
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_roku_home
+    - service: script.turn_on
+      data:
+        entity_id: script.brendans_kodi_stop
+    - service: scene.turn_on
+      data:
+        entity_id: scene.brendans_bedroom_off
+    - service: switch.turn_off
+      data:
         entity_id: switch.brendan_bedroom_tv_power
         
 brendans_bedroom_lights_off:

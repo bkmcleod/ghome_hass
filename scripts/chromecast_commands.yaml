@@ -3,10 +3,7 @@ brendans_chromecast_play_pause:
   sequence:
     - service: media_player.media_play_pause
       data:
-        entity_id: media_player.brendan_bedroom_cast   
-    - service: media_player.media_play_pause
-      data:
-        entity_id: media_player.brendan_bedroom_cast     
+        entity_id: media_player.brendan_bedroom_cast    
 brendans_chromecast_fast_forward:
   sequence:
     - service: media_player.media_next_track

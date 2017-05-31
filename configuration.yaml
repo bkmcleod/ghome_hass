@@ -30,6 +30,8 @@ light:
     brightness_command_topic: '/lights/brendanbedroom/tvlight/brightness/set'
     rgb_state_topic: '/lights/brendanbedroom/tvlight/rgb/status'
     rgb_command_topic: '/lights/brendanbedroom/tvlight/rgb/set'
+    white_value_state_topic: '/lights/brendanbedroom/tvlight/white/status'
+    white_value_command_topic: '/lights/brendanbedroom/tvlight/white/set'
     brightness_scale: 100
     qos: 0
     payload_on: "ON"
@@ -86,29 +88,25 @@ automation:
         state: 'on'
     action:
       service: script.turn_on
-      entity_id: script.brendans_bedroom_automate_leaving
+      entity_id: script.brendans_bedroom_automate_bedtime
+      
+  - alias: "Switch Input to Chromecast"
+    trigger:
+        - platform: state
+          entity_id: media_player.brendan_bedroom_cast
+          from: 'off'
+    action:
+      - service: script.turn_on
+        entity_id: script.brendans_bedroom_set_tv_to_chromecast
 media_player:
   - platform: roku
     host: 192.168.11.162
   - platform: kodi
-    host: 192.168.11.164
+    host: 192.168.11.165
   - platform: cast
-    host: 192.168.11.14
+    host: 192.168.11.166
 
 shell_command: !include shell_commands.yaml
-camera:
-  - platform: rpi_camera
-    name: Fire Camera
-    image_width: 640  
-    image_height: 480  
-    image_quality: 7  
-    image_rotation: 0  
-    timelapse: 1000  
-    horizontal_flip: 0  
-    vertical_flip: 0  
-    file_path: /home/hass/picamera/image.jpg 
-    
-    
     # Enables the frontend
 frontend:
 

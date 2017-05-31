@@ -40,7 +40,7 @@
   
   
 - platform: mqtt
-  name: "Office Switch 1"
+  name: "Office Center Monitor"
   state_topic: "/brendanoffice/powerstrip/switch1/status"
   command_topic: "/brendanoffice/powerstrip/switch1/set"
   payload_on: "ON"
@@ -49,7 +49,7 @@
   qos: 0
   retain: true 
 - platform: mqtt
-  name: "Office Switch 2"
+  name: "Office Lenovo Desktop"
   state_topic: "/brendanoffice/powerstrip/switch2/status"
   command_topic: "/brendanoffice/powerstrip/switch2/set"
   payload_on: "ON"
@@ -67,7 +67,7 @@
   qos: 0
   retain: true 
 - platform: mqtt
-  name: "Office Center Monitor"
+  name: "HDMI Switch"
   state_topic: "/brendanoffice/powerstrip/switch4/status"
   command_topic: "/brendanoffice/powerstrip/switch4/set"
   payload_on: "ON"
@@ -76,7 +76,7 @@
   qos: 0
   retain: true 
 - platform: mqtt
-  name: "Office Right Monitor"
+  name: "Office Left Monitor"
   state_topic: "/brendanoffice/powerstrip/switch5/status"
   command_topic: "/brendanoffice/powerstrip/switch5/set"
   payload_on: "ON"
@@ -85,7 +85,7 @@
   qos: 0
   retain: true 
 - platform: mqtt
-  name: "Office Left Monitor"
+  name: "Office Right Monitor"
   state_topic: "/brendanoffice/powerstrip/switch6/status"
   command_topic: "/brendanoffice/powerstrip/switch6/set"
   payload_on: "ON"
@@ -103,7 +103,7 @@
   qos: 0
   retain: true 
 - platform: mqtt
-  name: "Office Lenovo Desktop"
+  name: "ESD Strip"
   state_topic: "/brendanoffice/powerstrip/switch8/status"
   command_topic: "/brendanoffice/powerstrip/switch8/set"
   payload_on: "ON"
