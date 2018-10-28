@@ -6,8 +6,8 @@
   # payload_off: "OFF"
   # optimistic: false
   # qos: 0
-  # retain: true 
-  
+  # retain: true
+
 # - platform: mqtt
   # name: "Jordan Fireplace Monitor"
   # state_topic: "/fireplace/monitors/jordan/status"
@@ -16,7 +16,7 @@
   # payload_off: "OFF"
   # optimistic: true
   # qos: 0
-  # retain: true 
+  # retain: true
 # - platform: mqtt
   # name: "Brendan Fireplace Monitor"
   # state_topic: "/fireplace/monitors/brendan/status"
@@ -34,8 +34,8 @@
   # payload_off: "OFF"
   # optimistic: true
   # qos: 0
-  # retain: true 
-  
+  # retain: true
+
 # - platform: mqtt
   # name: "Kitchen Fan"
   # state_topic: "/fireplace/fan/kitchen/status"
@@ -44,80 +44,80 @@
   # payload_off: "OFF"
   # optimistic: false
   # qos: 0
-  # retain: true 
+  # retain: true
 
-  
-  
-  
+
+
+
 - platform: mqtt
-  name: "Office Center Monitor"
-  state_topic: "/brendanoffice/powerstrip/switch1/status"
-  command_topic: "/brendanoffice/powerstrip/switch1/set"
+  name: "Brendan Desk Left Monitor"
+  state_topic: "/office/smartswitch/status/0"
+  command_topic: "/office/smartswitch/set/0"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
   qos: 0
-  retain: true 
+  retain: true
 - platform: mqtt
-  name: "Office Lenovo Desktop"
-  state_topic: "/brendanoffice/powerstrip/switch2/status"
-  command_topic: "/brendanoffice/powerstrip/switch2/set"
+  name: "Brendan Desk Right Monitor"
+  state_topic: "/office/smartswitch/status/1"
+  command_topic: "/office/smartswitch/set/1"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
   qos: 0
-  retain: true 
+  retain: true
 - platform: mqtt
-  name: "Office Speakers"
-  state_topic: "/brendanoffice/powerstrip/switch3/status"
-  command_topic: "/brendanoffice/powerstrip/switch3/set"
+  name: "Brendan Desk Center Monitor"
+  state_topic: "/office/smartswitch/status/2"
+  command_topic: "/office/smartswitch/set/2"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
   qos: 0
-  retain: true 
+  retain: true
 - platform: mqtt
-  name: "HDMI Switch"
-  state_topic: "/brendanoffice/powerstrip/switch4/status"
-  command_topic: "/brendanoffice/powerstrip/switch4/set"
+  name: "Aux 1"
+  state_topic: "/office/smartswitch/status/3"
+  command_topic: "/office/smartswitch/set/3"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
   qos: 0
-  retain: true 
+  retain: true
 - platform: mqtt
-  name: "Office Left Monitor"
-  state_topic: "/brendanoffice/powerstrip/switch5/status"
-  command_topic: "/brendanoffice/powerstrip/switch5/set"
+  name: "Aux 2"
+  state_topic: "/office/smartswitch/status/4"
+  command_topic: "/office/smartswitch/set/4"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
   qos: 0
-  retain: true 
+  retain: true
 - platform: mqtt
-  name: "Office Right Monitor"
-  state_topic: "/brendanoffice/powerstrip/switch6/status"
-  command_topic: "/brendanoffice/powerstrip/switch6/set"
+  name: "Speakers"
+  state_topic: "/office/smartswitch/status/5"
+  command_topic: "/office/smartswitch/set/5"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
   qos: 0
-  retain: true 
+  retain: true
 - platform: mqtt
-  name: "Office HP Desktop"
-  state_topic: "/brendanoffice/powerstrip/switch7/status"
-  command_topic: "/brendanoffice/powerstrip/switch7/set"
+  name: "Soldering Station"
+  state_topic: "/office/smartswitch/status/6"
+  command_topic: "/office/smartswitch/set/6"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
   qos: 0
-  retain: true 
+  retain: true
 - platform: mqtt
-  name: "ESD Strip"
-  state_topic: "/brendanoffice/powerstrip/switch8/status"
-  command_topic: "/brendanoffice/powerstrip/switch8/set"
+  name: "Power Supply"
+  state_topic: "/office/smartswitch/status/7"
+  command_topic: "/office/smartswitch/set/7"
   payload_on: "ON"
   payload_off: "OFF"
-  optimistic: false
+  optimistic: true
   qos: 0
-  retain: true 
+  retain: true
