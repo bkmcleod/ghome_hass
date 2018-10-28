@@ -68,7 +68,7 @@ brendans_bedroom_automate_bedtime:
         entity_id: script.brendans_kodi_stop
     - service: scene.turn_on
       data:
-        entity_id: scene.brendans_bedroom_off
+        entity_id: scene.brendans_bedroom_bedtime
     - service: switch.turn_off
       data:
         entity_id: switch.brendan_bedroom_tv_power

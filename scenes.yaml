@@ -51,92 +51,31 @@
       state: off
     light.brendan_desk_lamp:
       state: off
-- name: Brendan's Bedroom Focus
+- name: Bedroom Focus
   entities:
-    light.brendan_bedroom_fan_1:
+    light.bedroom_post_lamp_1:
       state: on
-      rgb_color: [255,231,192]
-      xy_color: [0.3689,0.3719]
+      rgb_color: [255,203,126]
+      color_temp: 350
+      xy_color: [0.4474,0.4073]
       brightness: 254
-      color_temp: 230
-    light.brendan_bedroom_fan_2:
-      state: on
-      rgb_color: [255,231,192]
-      xy_color: [0.3689,0.3719]
-      brightness: 254
-      color_temp: 230
-    light.brendan_bedroom_fan_3:
-      state: on
-      rgb_color: [255,231,192]
-      xy_color: [0.3689,0.3719]
-      brightness: 254
-      color_temp: 230
-    light.brendan_bedroom_tv_light:
-      state: on
-      rgb_color: [255,231,192]
-      brightness: 100
-    light.brendan_bedroom_night_stand:
+    light.bedroom_post_light_2:
       state: on
       brightness: 254
-- name: Brendan's Bedroom TV Time
+- name: Bedroom Off
   entities:
-    light.brendan_bedroom_fan_1:
-      state: on
-      rgb_color: [202,107,51]
-      xy_color: [0.5815,0.3577]
-      brightness: 64
-    light.brendan_bedroom_fan_2:
-      state: on
-      rgb_color: [220,93,28]
-      xy_color: [0.6419,0.3336]
-      brightness: 64
-    light.brendan_bedroom_fan_3:
-      state: on
-      rgb_color: [191,115,53]
-      xy_color: [0.5507,0.3791]
-      brightness: 64
-    light.brendan_bedroom_tv_light:
-      state: on
-      rgb_color: [179,5,0]
-      brightness: 72
-    light.brendan_bedroom_night_stand:
+    light.bedroom_post_lamp_1:
       state: off
-- name: Brendan's Bedroom Off
+    light.bedroom_post_light_2:
+      state: off
+- name: Bedroom Bedtime
   entities:
-    light.brendan_bedroom_fan_1:
-      state: off
-    light.brendan_bedroom_fan_2:
-      state: off
-    light.brendan_bedroom_fan_3:
-      state: off
-    light.brendan_bedroom_tv_light:
-      state: off
-    light.brendan_bedroom_night_stand:
-      state: off
-- name: Brendan's Bedroom Bedtime
-  entities:
-    light.brendan_bedroom_fan_1:
-      state: off
-    light.brendan_bedroom_fan_2:
-      state: off
-    light.brendan_bedroom_fan_3:
-      state: off
-    light.brendan_bedroom_night_stand:
-      state: off
-    light.brendan_bedroom_tv_light:
+    light.bedroom_post_lamp_1:
       state: on
-      rgb_color: [131,255,238]
       brightness: 10
-- name: Brendan's Bedroom Night Stand
-  entities:
-    light.brendan_bedroom_fan_1:
-      state: off
-    light.brendan_bedroom_fan_2:
-      state: off
-    light.brendan_bedroom_fan_3:
-      state: off
-    light.brendan_bedroom_tv_light:
-      state: off
-    light.brendan_bedroom_night_stand:
+      rgb_color: [255,203,126]
+      color_temp: 350
+      xy_color: [0.4474,0.4073]
+    light.bedroom_post_light_2:
       state: on
-      brightness: 254
+      brightness: 10

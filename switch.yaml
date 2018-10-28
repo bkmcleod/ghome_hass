@@ -1,40 +1,50 @@
-- platform: mqtt
-  name: "Brendan Bedroom TV Power"
-  state_topic: "/media/brendanbedroom/tv/power/status"
-  command_topic: "/media/brendanbedroom/tv/power/set"
-  payload_on: "ON"
-  payload_off: "OFF"
-  optimistic: false
-  qos: 0
-  retain: true 
+# - platform: mqtt
+  # name: "Brendan Bedroom TV Power"
+  # state_topic: "/media/brendanbedroom/tv/power/status"
+  # command_topic: "/media/brendanbedroom/tv/power/set"
+  # payload_on: "ON"
+  # payload_off: "OFF"
+  # optimistic: false
+  # qos: 0
+  # retain: true 
   
-- platform: mqtt
-  name: "Jordan Fireplace Monitor"
-  state_topic: "/fireplace/monitors/jordan/status"
-  command_topic: "/fireplace/monitors/jordan/set"
-  payload_on: "ON"
-  payload_off: "OFF"
-  optimistic: true
-  qos: 0
-  retain: true 
-- platform: mqtt
-  name: "Brendan Fireplace Monitor"
-  state_topic: "/fireplace/monitors/brendan/status"
-  command_topic: "/fireplace/monitors/brendan/set"
-  payload_on: "ON"
-  payload_off: "OFF"
-  optimistic: true
-  qos: 0
-  retain: true
-- platform: mqtt
-  name: "Joel Fireplace Monitor"
-  state_topic: "/fireplace/monitors/joel/status"
-  command_topic: "/fireplace/monitors/joel/set"
-  payload_on: "ON"
-  payload_off: "OFF"
-  optimistic: true
-  qos: 0
-  retain: true 
+# - platform: mqtt
+  # name: "Jordan Fireplace Monitor"
+  # state_topic: "/fireplace/monitors/jordan/status"
+  # command_topic: "/fireplace/monitors/jordan/set"
+  # payload_on: "ON"
+  # payload_off: "OFF"
+  # optimistic: true
+  # qos: 0
+  # retain: true 
+# - platform: mqtt
+  # name: "Brendan Fireplace Monitor"
+  # state_topic: "/fireplace/monitors/brendan/status"
+  # command_topic: "/fireplace/monitors/brendan/set"
+  # payload_on: "ON"
+  # payload_off: "OFF"
+  # optimistic: true
+  # qos: 0
+  # retain: true
+# - platform: mqtt
+  # name: "Joel Fireplace Monitor"
+  # state_topic: "/fireplace/monitors/joel/status"
+  # command_topic: "/fireplace/monitors/joel/set"
+  # payload_on: "ON"
+  # payload_off: "OFF"
+  # optimistic: true
+  # qos: 0
+  # retain: true 
+  
+# - platform: mqtt
+  # name: "Kitchen Fan"
+  # state_topic: "/fireplace/fan/kitchen/status"
+  # command_topic: "/fireplace/fan/kitchen/set"
+  # payload_on: "ON"
+  # payload_off: "OFF"
+  # optimistic: false
+  # qos: 0
+  # retain: true 
 
   
   

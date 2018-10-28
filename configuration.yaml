@@ -22,27 +22,46 @@ light:
   - platform: hue
     host: 192.168.11.161
 
-  - platform: mqtt
-    name: 'Brendan Bedroom TV Light'
-    state_topic: '/lights/brendanbedroom/tvlight/light/status'
-    command_topic: '/lights/brendanbedroom/tvlight/light/switch'
-    brightness_state_topic: '/lights/brendanbedroom/tvlight/brightness/status'
-    brightness_command_topic: '/lights/brendanbedroom/tvlight/brightness/set'
-    rgb_state_topic: '/lights/brendanbedroom/tvlight/rgb/status'
-    rgb_command_topic: '/lights/brendanbedroom/tvlight/rgb/set'
-    white_value_state_topic: '/lights/brendanbedroom/tvlight/white/status'
-    white_value_command_topic: '/lights/brendanbedroom/tvlight/white/set'
-    brightness_scale: 100
-    qos: 0
-    payload_on: "ON"
-    payload_off: "OFF"
-    optimistic: false
+  # - platform: mqtt
+    # name: 'Brendan Bedroom TV Light'
+    # state_topic: '/lights/brendanbedroom/tvlight/light/status'
+    # command_topic: '/lights/brendanbedroom/tvlight/light/switch'
+    # brightness_state_topic: '/lights/brendanbedroom/tvlight/brightness/status'
+    # brightness_command_topic: '/lights/brendanbedroom/tvlight/brightness/set'
+    # rgb_state_topic: '/lights/brendanbedroom/tvlight/rgb/status'
+    # rgb_command_topic: '/lights/brendanbedroom/tvlight/rgb/set'
+    # white_value_state_topic: '/lights/brendanbedroom/tvlight/white/status'
+    # white_value_command_topic: '/lights/brendanbedroom/tvlight/white/set'
+    # brightness_scale: 100
+    # qos: 0
+    # payload_on: "ON"
+    # payload_off: "OFF"
+    # optimistic: false
+    
+  # - platform: mqtt
+    # name: 'Brendan Bedroom Headboard Light'
+    # state_topic: '/lights/brendanbedroom/headrest/light/status'
+    # command_topic: '/lights/brendanbedroom/headrest/light/switch'
+    # brightness_state_topic: '/lights/brendanbedroom/headrest/brightness/status'
+    # brightness_command_topic: '/lights/brendanbedroom/headrest/brightness/set'
+    # rgb_state_topic: '/lights/brendanbedroom/headrest/rgb/status'
+    # rgb_command_topic: '/lights/brendanbedroom/headrest/rgb/set'
+    # white_value_state_topic: '/lights/brendanbedroom/headrest/white/status'
+    # white_value_command_topic: '/lights/brendanbedroom/headrest/white/set'
+    # brightness_scale: 100
+    # qos: 0
+    # payload_on: "ON"
+    # payload_off: "OFF"
+    # optimistic: false
 #Group setups
 group: !include groups.yaml  
 
+recorder:
+  purge_days: 1
+
 #scene setups
 scene: !include scenes.yaml
-script: !include_dir_merge_named scripts/
+#script: !include_dir_merge_named scripts/
 mqtt:
   broker: 192.168.11.160
   port: 1883
@@ -50,63 +69,86 @@ mqtt:
       
 binary_sensor:
   - platform: mqtt
-    name: "Bedtime Switch"
-    state_topic: "/dash/bedtime_button"
+    name: "Heather Bedpost"
+    state_topic: "/dash/heather_bedpost"
     payload_on: "active"
     payload_off: "inactive"
-sensor:
-  platform: mqtt
-  name: "Fireplace Temperature"
-  state_topic: "/fireplace/exahust"
-  qos: 0
-  unit_of_measurement: "ºC"
+  - platform: mqtt
+    name: "Brendan Bedpost"
+    state_topic: "/dash/brendan_bedpost"
+    payload_on: "active"
+    payload_off: "inactive"
+    
+    
+
+# # sensor:
+  # - platform: mqtt
+    # name: "Fireplace Temperature"
+    # state_topic: "/fireplace/exahust"
+    # qos: 0
+    # unit_of_measurement: "ºC"
+  # - platform: mqtt
+    # name: "Fireplace Ambient"
+    # state_topic: "/fireplace/ambient"
+    # qos: 0
+    # unit_of_measurement: "ºC"
 switch: !include switch.yaml   
-input_select:
-  brendan_bedroom_active_media_player:
-    name: Bedroom Active Player
-    options:
-     - Roku
-     - Kodi
-     - Chromecast
-    initial: Roku
-  fireplace_burn_zone:
-    name: Fireplace Burn Zone
-    options:
-     - Over Temperature
-     - Optimal Burn Zone
-     - Below Temperature
-     - Not Burning
-    initial: Not Burning
+# input_select:
+  # brendan_bedroom_active_media_player:
+    # name: Bedroom Active Player
+    # options:
+     # - Roku
+     # - Kodi
+     # - Chromecast
+    # initial: Roku
+  # fireplace_burn_zone:
+    # name: Fireplace Burn Zone
+    # options:
+     # - Over Temperature
+     # - Optimal Burn Zone
+     # - Below Temperature
+     # - Not Burning
+    # initial: Not Burning
     
     
 automation:
-  - alias: "Bedtime Trigger"
+  - alias: "Heather Bedpost Trigger"
     hide_entity: True
     trigger:
       - platform: state
-        entity_id: binary_sensor.bedtime_switch
+        entity_id: binary_sensor.heather_bedpost
         state: 'on'
     action:
-      service: script.turn_on
-      entity_id: script.brendans_bedroom_automate_bedtime
-      
-  - alias: "Switch Input to Chromecast"
+      service: light.turn_off
+      entity_id: group.bedroom_lights
+  - alias: "Brendan Bedpost Trigger"
+    hide_entity: True
     trigger:
-        - platform: state
-          entity_id: media_player.brendan_bedroom_cast
-          from: 'off'
+      - platform: state
+        entity_id: binary_sensor.brendan_bedpost
+        state: 'on'
     action:
-      - service: script.turn_on
-        entity_id: script.brendans_bedroom_set_tv_to_chromecast
+      service: light.turn_off
+      entity_id: group.bedroom_lights
+      
+      
+  # - alias: "Switch Input to Chromecast"
+    # trigger:
+        # - platform: state
+          # entity_id: media_player.brendan_bedroom_cast
+          # from: 'off'
+    # action:
+      # - service: script.turn_on
+        # entity_id: script.brendans_bedroom_set_tv_to_chromecast
 media_player:
   - platform: roku
     host: 192.168.11.162
-  - platform: kodi
-    host: 192.168.11.165
+  # - platform: kodi
+    # host: 192.168.11.165
   - platform: cast
     host: 192.168.11.166
 
-shell_command: !include shell_commands.yaml
+#shell_command: !include shell_commands.yaml
     # Enables the frontend
 frontend:
 
