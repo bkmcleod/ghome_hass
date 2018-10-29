@@ -5,19 +5,18 @@ brendan_office_group:
   view: true
   entities:
     - group.office_lights
-    - group.office_overhead_lights
     - group.office_powerstrip
-    # - group.brendan_office_monitors
+    - group.brendan_office_monitors
     # - group.brendan_office_automation_scripts
 
-office_Fan_lights:
+office_fan_lights:
   name: Office Fan Lights
   entities:
     - light.brendan_office_fan_1
     - light.brendan_office_fan_2
     - light.brendan_office_fan_3
     - light.brendan_office_fan_4
-    
+
 office_lights:
   name: All Office Lights
   entities:
@@ -27,29 +26,29 @@ office_lights:
     - light.brendan_office_fan_3
     - light.brendan_office_fan_4
 
- 
-# brendan_office_monitors:
-  # name: Brendan's Office Monitors
-  # entities:
-    # - switch.office_left_monitor
-    # - switch.office_center_monitor
-    # - switch.office_right_monitor
-    
+
+brendan_office_monitors:
+  name: Brendan's Office Monitors
+  entities:
+    - switch.brendan_desk_left_monitor
+    - switch.brendan_desk_right_monitor
+    - switch.brendan_desk_center_monitor
+
 office_powerstrip:
   name: Office Powerstrip
   entities:
-    - switch.office_center_monitor
-    - switch.office_lenovo_desktop
-    - switch.office_speakers
-    - switch.hdmi_switch
-    - switch.office_left_monitor
-    - switch.office_right_monitor
-    - switch.office_hp_desktop
-    - switch.esd_strip
+    - switch.brendan_desk_left_monitor
+    - switch.brendan_desk_right_monitor
+    - switch.brendan_desk_center_monitor
+    - switch.aux_1
+    - switch.aux_2
+    - switch.speakers
+    - switch.soldering_station
+    - switch.power_supply
 
 # brendan_office_automation_scripts:
   # name: Brendan's Office Automation Scripts
-  # entities:  
+  # entities:
     # - script.brendans_office_all_off
     # - script.brendans_office_simple_off
     # - script.brendans_office_simple_on
@@ -73,15 +72,15 @@ bedroom_lights:
     # - light.brendan_bedroom_night_stand
     # - light.brendan_bedroom_tv_light
     # - light.brendan_bedroom_headboard_light
-    
+
 # brendan_bedroom_fan_lights:
   # name: Brendan's Bedroom Fan Lights
   # entities:
     # - light.brendan_bedroom_fan_1
     # - light.brendan_bedroom_fan_2
-    # - light.brendan_bedroom_fan_3  
-  
-#Pass throughs for curl commands to roku   
+    # - light.brendan_bedroom_fan_3
+
+#Pass throughs for curl commands to roku
 # brendan_roku_scripts:
   # name: Brendan's Bedroom Roku Scripts
   # entities:
@@ -98,8 +97,8 @@ bedroom_lights:
     # - script.brendans_roku_launch_hulu
     # - script.brendans_roku_fast_forward
     # - script.brendans_roku_fast_backward
- 
-# #Brendan's Bedroom TV Control Scripts  
+
+# #Brendan's Bedroom TV Control Scripts
 # brendan_tv_scripts:
   # name: Brendan's Bedroom TV Scripts
   # entities:
@@ -112,10 +111,10 @@ bedroom_lights:
     # - script.brendan_tv_input_pi
     # - script.brendan_tv_input_chromecast
     # - script.brendan_tv_input
- 
+
 # brendan_bedroom_automation_scripts:
   # name: Brendan's Bedroom Automation Scripts
-  # entities:  
+  # entities:
     # - script.brendans_bedroom_watch_hulu
     # - script.brendans_bedroom_watch_netflix
     # - script.brendans_bedroom_automate_leaving

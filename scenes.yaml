@@ -1,11 +1,6 @@
 - name: Brendan's Office Bright
   entities:
-    light.brendan_office_roof_1:
-      state: on
-      xy_color: [0.4576, 0.4099]
-      brightness: 254
-      color_temp: 366
-    light.brendan_office_roof_2:
+    group.office_fan_lights:
       state: on
       xy_color: [0.4576, 0.4099]
       brightness: 254
@@ -15,12 +10,7 @@
       brightness: 254
 - name: Brendan's Office Relax
   entities:
-    light.brendan_office_roof_1:
-      state: on
-      xy_color: [0.5017,0.4152]
-      brightness: 144
-      color_temp: 443
-    light.brendan_office_roof_2:
+    group.office_fan_lights:
       state: on
       xy_color: [0.5017,0.4152]
       brightness: 144
@@ -30,12 +20,7 @@
       brightness: 144
 - name: Brendan's Office Focus
   entities:
-    light.brendan_office_roof_1:
-      state: on
-      xy_color: [0.3689,0.3719]
-      brightness: 254
-      color_temp: 230
-    light.brendan_office_roof_2:
+    group.office_fan_lights:
       state: on
       xy_color: [0.3689,0.3719]
       brightness: 254
@@ -45,9 +30,7 @@
       brightness: 253
 - name: Brendan's Office Off
   entities:
-    light.brendan_office_roof_1:
-      state: off
-    light.brendan_office_roof_2:
+    group.office_fan_lights::
       state: off
     light.brendan_desk_lamp:
       state: off
