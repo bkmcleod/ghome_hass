@@ -7,6 +7,10 @@ brendan_office_group:
     - group.office_lights
     - group.office_powerstrip
     - group.brendan_office_monitors
+    - scene.brendans_office_bright
+    - scene.brendans_office_relax
+    - scene.brendans_office_focus
+    - scene.brendans_office_off
     # - group.brendan_office_automation_scripts
 
 office_fan_lights:
